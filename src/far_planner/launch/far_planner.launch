@@ -17,5 +17,5 @@
     <node type="rviz" name="far_rviz" pkg="rviz" args="-d $(find far_planner)/rviz/$(arg config).rviz" respawn="true"/>
     <!-- Launch Graph Manager for saving and loading graph -->
     <include file="$(find graph_decoder)/launch/decoder.launch" />
-    <node pkg="tf" type="static_transform_publisher" name="map_to_camera_init_tf" args="0 0 0 0 0 0 map camera_init 100" />
+    <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_camera_init_tf" args="0 0 0 0 0 0 map camera_init 100" /> -->
 </launch>
