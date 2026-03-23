@@ -51,6 +51,12 @@
     <param name="goalClearRange" type="double" value="0.5" />
     <param name="goalX" type="double" value="$(arg goalX)" />
     <param name="goalY" type="double" value="$(arg goalY)" />
+    
+    <param name="sensorFrame" type="string" value="body" />
+    <param name="vehicleFrame" type="string" value="body" />
+
+    <remap from="/state_estimation" to="/Odometry" />
+    <remap from="/registered_scan" to="/cloud_registered" />
   </node>
 
   <node pkg="local_planner" type="pathFollower" name="pathFollower" output="screen" required="true">
@@ -82,10 +88,10 @@
     <param name="autonomyMode" value="$(arg autonomyMode)" />
     <param name="autonomySpeed" value="$(arg autonomySpeed)" />
     <param name="joyToSpeedDelay" value="$(arg joyToSpeedDelay)" />
+
+    <param name="sensorFrame" type="string" value="body" />
+    <param name="vehicleFrame" type="string" value="body" />
+    <remap from="/state_estimation" to="/Odometry" />
   </node>
 
-  <node pkg="tf" type="static_transform_publisher" name="vehicleTransPublisher" args="-$(arg sensorOffsetX) -$(arg sensorOffsetY) 0 0 0 0 /sensor /vehicle 1000"/>
-
-  <node pkg="tf" type="static_transform_publisher" name="sensorTransPublisher" args="0 0 $(arg cameraOffsetZ) -1.5707963 0 -1.5707963 /sensor /camera 1000"/>
-
-</launch>
+  </launch>
