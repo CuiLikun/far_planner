@@ -1,8 +1,8 @@
 # Dynamic Planner Default Params
 
-is_hgt_filter: true
-bottom_filter_hgt: 0.2
-top_filter_hgt: 2.0
+#is_hgt_filter: true
+#bottom_filter_hgt: 0.2
+#top_filter_hgt: 2.0
 
 main_run_freq                           : 2.5
 voxel_dim                               : 0.15  # Unit: meter
