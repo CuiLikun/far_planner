@@ -13,7 +13,7 @@
 
   <node pkg="local_planner" type="localPlanner" name="localPlanner" output="screen" required="true">
     <param name="pathFolder" type="string" value="$(find local_planner)/paths" />
-    <param name="vehicleLength" type="double" value="0.6" />
+    <param name="vehicleLength" type="double" value="0.85" />
     <param name="vehicleWidth" type="double" value="0.6" />
     <param name="sensorOffsetX" value="$(arg sensorOffsetX)" />
     <param name="sensorOffsetY" value="$(arg sensorOffsetY)" />
@@ -71,7 +71,7 @@
     <param name="maxSpeed" value="$(arg maxSpeed)" />
     <param name="maxAccel" type="double" value="2.5" />
     <param name="switchTimeThre" type="double" value="1.0" />
-    <param name="dirDiffThre" type="double" value="0.1" />
+    <param name="dirDiffThre" type="double" value="0.2" />
     <param name="stopDisThre" type="double" value="0.2" />
     <param name="slowDwnDisThre" type="double" value="0.85" />
     <param name="useInclRateToSlow" type="bool" value="false" />
